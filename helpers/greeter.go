@@ -9,9 +9,10 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
-func Greet() {
+func greet() {
 	fmt.Println("Welcome to the Brain Games!")
 	fmt.Println("May I have your name? ")
 
@@ -19,6 +20,6 @@ func Greet() {
 
 	text, _ := reader.ReadString('\n')
 
-	greeting := fmt.Sprintf("Hello, %s!", text)
+	greeting := fmt.Sprintf("Hello, %s!", strings.TrimSuffix(text, "\n"))
 	fmt.Println(greeting)
 }

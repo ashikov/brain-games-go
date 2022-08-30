@@ -1,12 +1,11 @@
 /*
 Copyright © 2022 Roman Ashikov pickle@ashikov.ru
-
 */
 package cmd
 
 import (
-	"fmt"
-
+	// "fmt"
+	"github.com/ashikov/brain-games/helpers"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +15,8 @@ var calcCmd = &cobra.Command{
 	Short: "Adding, subtraction or multiplication of two values",
 	Long: `Adding, subtraction or multiplication of two values`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("calc called")
+		// fmt.Println("calc called")
+		helpers.Engine()
 	},
 }
 
