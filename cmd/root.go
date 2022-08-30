@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 Roman Ashikov <pickle@ashikov.ru>
+Copyright © 2022 Roman Ashikov pickle@ashikov.ru
 
 */
 package cmd
@@ -15,13 +15,8 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "brain-games",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "This package includes 5 simple math games",
+	Long: `This package includes 5 simple math games to be launched as CLI`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
