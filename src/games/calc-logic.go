@@ -34,7 +34,7 @@ func calculate(operator string, number1, number2 int) (int, error) {
 	}
 }
 
-func run() {
+func RunCalc() {
 	operations := [3]string{"+", "-", "*"}
 	gameData := [3][2]string{}
 
@@ -45,10 +45,18 @@ func run() {
 		a := src.GetRandomIntegerWithinRange(min, max)
 		b := src.GetRandomIntegerWithinRange(min, max)
 
-		question := fmt.Sprintf("%s %s %s", a, operator, b)
+		question := fmt.Sprintf(
+			"%s %s %s",
+			strconv.Itoa(a),
+			operator,
+			strconv.Itoa(b),
+		)
 
 		result, _ := calculate(operator, a, b)
 		correctAnswer := strconv.Itoa(result)
 
+		gameData[i] = [2]string{question, correctAnswer}
 	}
+
+	src.Engine(gameData, desc)
 }

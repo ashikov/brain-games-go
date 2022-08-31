@@ -5,7 +5,7 @@ package cmd
 
 import (
 	// "fmt"
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/src/games"
 	"github.com/spf13/cobra"
 )
 
@@ -16,7 +16,7 @@ var calcCmd = &cobra.Command{
 	Long: `Adding, subtraction or multiplication of two values`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// fmt.Println("calc called")
-		src.Engine()
+		games.RunCalc()
 	},
 }
 
