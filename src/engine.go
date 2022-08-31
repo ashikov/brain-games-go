@@ -18,9 +18,10 @@ func Engine(data [3][2]string, desc string) {
 
 	reader := bufio.NewReader(os.Stdin)
 
-	name, _ := reader.ReadString('\n')
+	input, _ := reader.ReadString('\n')
+	name := strings.TrimSuffix(input, "\n")
 
-	greeting := fmt.Sprintf("Hello, %s!", strings.TrimSuffix(name, "\n"))
+	greeting := fmt.Sprintf("Hello, %s!", name)
 	fmt.Println(greeting)
 
 	fmt.Println(desc)
@@ -38,8 +39,7 @@ func Engine(data [3][2]string, desc string) {
 		userAnswer := strings.TrimSuffix(input, "\n")
 
 		if userAnswer != answer {
-			placeholdersText := `'%s' is wrong answer ;(. Correct answer was '%s'."
-			Let's try again, %s!`
+			placeholdersText :=`'%s' is wrong answer ;(. Correct answer was '%s'. Let's try again, %s!`
 			filledText := fmt.Sprintf(placeholdersText, userAnswer, answer, name)
 
 			fmt.Println(filledText)
