@@ -14,7 +14,7 @@ make install
 # go install
 ```
 
-## Check Available games
+## Check Available Games
 
 ```bash
 brain-games run --help
