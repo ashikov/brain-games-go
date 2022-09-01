@@ -9,12 +9,6 @@ import (
 	"github.com/ashikov/brain-games/src"
 )
 
-
-const desc = "What is the result of the expression?"
-const RoundsCount = 3
-const min = 1
-const max = 10
-
 func calculate(operator string, number1, number2 int) (int, error) {
 	switch operator {
 		case "+":
@@ -29,11 +23,14 @@ func calculate(operator string, number1, number2 int) (int, error) {
 	}
 }
 
-func PrepareData() [3][2]string {
+func PrepareCalcData() [3][2]string {
+	min := 1
+	max := 10
+
 	operations := [3]string{"+", "-", "*"}
 	gameData := [3][2]string{}
 
-	for i := 0; i < RoundsCount; i++ {
+	for i := 0; i < roundsCount; i++ {
 		randomIndex := rand.Intn(len(operations))
 		operator := operations[randomIndex]
 
@@ -57,6 +54,8 @@ func PrepareData() [3][2]string {
 }
 
 func RunCalc() {
-	gameData := PrepareData()
+	gameData := PrepareCalcData()
+	desc := "What is the result of the expression?"
+
 	src.Engine(gameData, desc)
 }
