@@ -34,7 +34,7 @@ func calculate(operator string, number1, number2 int) (int, error) {
 	}
 }
 
-func RunCalc() {
+func PrepareData() [3][2]string {
 	operations := [3]string{"+", "-", "*"}
 	gameData := [3][2]string{}
 
@@ -58,5 +58,10 @@ func RunCalc() {
 		gameData[i] = [2]string{question, correctAnswer}
 	}
 
+	return gameData
+}
+
+func RunCalc() {
+	gameData := PrepareData()
 	src.Engine(gameData, desc)
 }
