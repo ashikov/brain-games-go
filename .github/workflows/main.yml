@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.operating-systems }}
     strategy:
       matrix:
-        operating-systems: [ubuntu-latest, windows-latest]
+        operating-systems: [macos-latest, ubuntu-latest, windows-latest]
 
     steps:
       - uses: actions/checkout@v3
@@ -20,3 +20,8 @@ jobs:
 
       - name: Run tests
         run: make test
+
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v3
+        with:
+          version: v1.50
