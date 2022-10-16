@@ -6,12 +6,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 var rootCmd = &cobra.Command{
 	Use:   "brain-games",
 	Short: "This package includes 5 simple math games",
-	Long: "This package includes 5 simple math games to be launched as CLI",
+	Long:  "This package includes 5 simple math games to be launched as CLI",
 }
 
 func Execute() {

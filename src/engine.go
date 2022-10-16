@@ -1,8 +1,8 @@
 package src
 
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"os"
 	"strings"
 )
@@ -34,7 +34,7 @@ func Engine(data [3][2]string, desc string) {
 		userAnswer := strings.TrimSuffix(input, "\n")
 
 		if userAnswer != answer {
-			placeholdersText :=`'%s' is wrong answer ;(. Correct answer was '%s'. Let's try again, %s!`
+			placeholdersText := `'%s' is wrong answer ;(. Correct answer was '%s'. Let's try again, %s!`
 			filledText := fmt.Sprintf(placeholdersText, userAnswer, answer, name)
 
 			fmt.Println(filledText)

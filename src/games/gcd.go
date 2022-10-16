@@ -9,7 +9,7 @@ import (
 
 func getGcd(a, b int) int {
 	if b != 0 {
-		return getGcd(b, a % b)
+		return getGcd(b, a%b)
 	}
 
 	return a

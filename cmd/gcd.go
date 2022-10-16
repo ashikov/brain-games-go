@@ -8,7 +8,7 @@ import (
 var gcdCmd = &cobra.Command{
 	Use:   "gcd",
 	Short: "You'll get two numbers and have to calculate their gratest common divisor",
-	Long: "You'll get two numbers and have to calculate their gratest common divisor",
+	Long:  "You'll get two numbers and have to calculate their gratest common divisor",
 	Run: func(cmd *cobra.Command, args []string) {
 		games.RunGcd()
 	},

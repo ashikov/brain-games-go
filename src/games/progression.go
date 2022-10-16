@@ -14,7 +14,7 @@ func PrepareProgressionData() [3][2]string {
 	for i := 0; i < roundsCount; i++ {
 		start := src.GetRandomIntegerWithinRange(1, 70)
 		step := src.GetRandomIntegerWithinRange(2, 10)
-		hiddenElementIndex := src.GetRandomIntegerWithinRange(0, length - 1)
+		hiddenElementIndex := src.GetRandomIntegerWithinRange(0, length-1)
 
 		progression := [10]string{}
 
@@ -22,12 +22,12 @@ func PrepareProgressionData() [3][2]string {
 			if j == hiddenElementIndex {
 				progression[j] = ".."
 			} else {
-				progression[j] = strconv.Itoa(start + step * j)
+				progression[j] = strconv.Itoa(start + step*j)
 			}
 		}
 
 		question := strings.Join(progression[:], " ")
-		answer := strconv.Itoa(start + step * hiddenElementIndex)
+		answer := strconv.Itoa(start + step*hiddenElementIndex)
 
 		gameData[i] = [2]string{question, answer}
 	}

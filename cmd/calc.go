@@ -8,7 +8,7 @@ import (
 var calcCmd = &cobra.Command{
 	Use:   "calc",
 	Short: "Adding, subtraction or multiplication of two values",
-	Long: "Adding, subtraction or multiplication of two values",
+	Long:  "Adding, subtraction or multiplication of two values",
 	Run: func(cmd *cobra.Command, args []string) {
 		games.RunCalc()
 	},

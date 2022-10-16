@@ -15,8 +15,8 @@ func isPrime(number int) bool {
 		return true
 	}
 
-	for i := 2; float64(i) <= math.Sqrt(float64(number)); i ++ {
-		if number % i == 0 {
+	for i := 2; float64(i) <= math.Sqrt(float64(number)); i++ {
+		if number%i == 0 {
 			return false
 		}
 	}
@@ -49,7 +49,7 @@ func PreparePrimeData() [3][2]string {
 }
 
 func RunPrime() {
-	gameData := PreparePrimeData();
+	gameData := PreparePrimeData()
 	desc := "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
 
 	src.Engine(gameData, desc)

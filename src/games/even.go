@@ -7,7 +7,7 @@ import (
 )
 
 func isEven(number int) bool {
-	return number % 2 == 0
+	return number%2 == 0
 }
 
 func PrepareEvenData() [3][2]string {
@@ -20,7 +20,7 @@ func PrepareEvenData() [3][2]string {
 		number := src.GetRandomIntegerWithinRange(min, max)
 		question := strconv.Itoa(number)
 
-		var answer string;
+		var answer string
 		if isEven(number) {
 			answer = "yes"
 		} else {

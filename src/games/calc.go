@@ -11,15 +11,15 @@ import (
 
 func calculate(operator string, number1, number2 int) (int, error) {
 	switch operator {
-		case "+":
-			return number1 + number2, nil
-		case "-":
-			return number1 - number2, nil
-		case "*":
-			return number1 * number2, nil
-		default:
-			error := fmt.Sprintf("Unknown operator: %s", operator)
-			return 0, errors.New(error)
+	case "+":
+		return number1 + number2, nil
+	case "-":
+		return number1 - number2, nil
+	case "*":
+		return number1 * number2, nil
+	default:
+		error := fmt.Sprintf("Unknown operator: %s", operator)
+		return 0, errors.New(error)
 	}
 }
 
