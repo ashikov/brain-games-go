@@ -4,7 +4,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/internal"
 )
 
 func isPrime(number int) bool {
@@ -31,7 +31,7 @@ func PreparePrimeData() [3][2]string {
 	gameData := [3][2]string{}
 
 	for i := 0; i < roundsCount; i++ {
-		number := src.GetRandomIntegerWithinRange(min, max)
+		number := internal.GetRandomIntegerWithinRange(min, max)
 
 		question := strconv.Itoa(number)
 
@@ -52,5 +52,5 @@ func RunPrime() {
 	gameData := PreparePrimeData()
 	desc := "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
 
-	src.Engine(gameData, desc)
+	internal.Engine(gameData, desc)
 }

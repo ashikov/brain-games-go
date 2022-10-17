@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/internal"
 )
 
 func getGcd(a, b int) int {
@@ -22,8 +22,8 @@ func PrepareGcdData() [3][2]string {
 	gameData := [3][2]string{}
 
 	for i := 0; i < roundsCount; i++ {
-		number1 := src.GetRandomIntegerWithinRange(min, max)
-		number2 := src.GetRandomIntegerWithinRange(min, max)
+		number1 := internal.GetRandomIntegerWithinRange(min, max)
+		number2 := internal.GetRandomIntegerWithinRange(min, max)
 
 		question := fmt.Sprintf(
 			"%s %s",
@@ -45,5 +45,5 @@ func RunGcd() {
 	gameData := PrepareGcdData()
 	desc := "Find the greatest common divisor of given numbers."
 
-	src.Engine(gameData, desc)
+	internal.Engine(gameData, desc)
 }

@@ -6,7 +6,7 @@ import (
 	"math/rand"
 	"strconv"
 
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/internal"
 )
 
 func calculate(operator string, number1, number2 int) (int, error) {
@@ -34,8 +34,8 @@ func PrepareCalcData() [3][2]string {
 		randomIndex := rand.Intn(len(operations))
 		operator := operations[randomIndex]
 
-		a := src.GetRandomIntegerWithinRange(min, max)
-		b := src.GetRandomIntegerWithinRange(min, max)
+		a := internal.GetRandomIntegerWithinRange(min, max)
+		b := internal.GetRandomIntegerWithinRange(min, max)
 
 		question := fmt.Sprintf(
 			"%s %s %s",
@@ -57,5 +57,5 @@ func RunCalc() {
 	gameData := PrepareCalcData()
 	desc := "What is the result of the expression?"
 
-	src.Engine(gameData, desc)
+	internal.Engine(gameData, desc)
 }

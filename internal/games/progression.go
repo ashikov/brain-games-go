@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/internal"
 )
 
 func PrepareProgressionData() [3][2]string {
@@ -12,9 +12,9 @@ func PrepareProgressionData() [3][2]string {
 	length := 10
 
 	for i := 0; i < roundsCount; i++ {
-		start := src.GetRandomIntegerWithinRange(1, 70)
-		step := src.GetRandomIntegerWithinRange(2, 10)
-		hiddenElementIndex := src.GetRandomIntegerWithinRange(0, length-1)
+		start := internal.GetRandomIntegerWithinRange(1, 70)
+		step := internal.GetRandomIntegerWithinRange(2, 10)
+		hiddenElementIndex := internal.GetRandomIntegerWithinRange(0, length-1)
 
 		progression := [10]string{}
 
@@ -39,5 +39,5 @@ func RunProgression() {
 	gameData := PrepareProgressionData()
 	desc := "What number is missing in the progression?"
 
-	src.Engine(gameData, desc)
+	internal.Engine(gameData, desc)
 }

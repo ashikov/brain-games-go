@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/ashikov/brain-games/src/games"
+	"github.com/ashikov/brain-games/internal/games"
 	"github.com/spf13/cobra"
 )
 

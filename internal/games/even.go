@@ -3,7 +3,7 @@ package games
 import (
 	"strconv"
 
-	"github.com/ashikov/brain-games/src"
+	"github.com/ashikov/brain-games/internal"
 )
 
 func isEven(number int) bool {
@@ -17,7 +17,7 @@ func PrepareEvenData() [3][2]string {
 	gameData := [3][2]string{}
 
 	for i := 0; i < roundsCount; i++ {
-		number := src.GetRandomIntegerWithinRange(min, max)
+		number := internal.GetRandomIntegerWithinRange(min, max)
 		question := strconv.Itoa(number)
 
 		var answer string
@@ -37,5 +37,5 @@ func RunEven() {
 	gameData := PrepareEvenData()
 	desc := "Answer \"yes\" if number even otherwise answer \"no\"."
 
-	src.Engine(gameData, desc)
+	internal.Engine(gameData, desc)
 }
