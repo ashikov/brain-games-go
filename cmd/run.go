@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -11,7 +11,10 @@ var runCmd = &cobra.Command{
 	Short: "Starts the game",
 	Long:  "Starts the game passed as an argument",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("run called")
+		if len(args) == 0 {
+			cmd.Help()
+			os.Exit(0)
+        }
 	},
 }
 
